@@ -1,29 +1,30 @@
-// DESAFIO CLASSIFICADOR DE NÍVEL DE HEROI
+// DESAFIO CALCULADORA DE PARTIDAS RANKEADAS
 
-let heroi = "RANSES DEV"
-let xp = 4000
-let nivel = "NULL"
+let vitorias = 151
+let derrotas = 50
+let ranking = calcRanking(vitorias,derrotas)
 
+console.log(ranking)
 
+function calcRanking (vitorias, derrotas){
+    return vitorias-derrotas
+}
 
-
-    if (xp <= 1000){
+    if (ranking <= 10){
         nivel = "Ferro"
-    } else if (xp > 1000 && xp <= 2000){
+    } else if (ranking > 10 && ranking <= 20){
         nivel = "Bronze"
-    } else if (xp > 2000 && xp <= 5000){
+    } else if (ranking > 20 && ranking <= 50){
         nivel = "Prata"
-    } else if (xp > 5000 && xp <= 7000){
+    } else if (ranking > 50 && ranking <= 80){
         nivel = "Ouro"
-    } else if (xp > 7000 && xp <= 8000){
-        nivel = "Platina"
-    } else if (xp > 8000 && xp <= 9000){
-        nivel = "Ascendente"
-    } else if (xp > 9000 && xp <=10000){
-        nivel = "Imortal"
+    } else if (ranking > 80 && ranking <= 90){
+        nivel = "Diamante"
+    } else if (ranking > 90 && ranking <= 100){
+        nivel = "Lendário"
     } else {
-        nivel = "Radiante"
+        nivel = "Imortal"
     }
-    console.log("O Herói de nome " + heroi + " está no nível de " + nivel)
+    console.log("O Herói tem saldo de " + ranking + " está no nível de " + nivel)
         
 
